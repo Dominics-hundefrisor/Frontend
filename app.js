@@ -23,6 +23,9 @@ function start() {
               <li class="nav-item">\
                 <a class="nav-link active" href="galleri.html">Galleri</a>\
               </li>\
+              <li class="nav-item">\
+                <a class="nav-link active" href="Loginpage.html">Personale login</a>\
+              </li>\
             </ul>\
           </div>\
           </div>'
