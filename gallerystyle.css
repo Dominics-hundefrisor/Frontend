@@ -8,6 +8,7 @@
 
 .picture-row img {
     width: 30%;
+    cursor: pointer;
 }
 
 .img-overlay-background{
