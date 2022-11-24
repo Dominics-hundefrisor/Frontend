@@ -12,32 +12,28 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
-<body onload="start()">
+<body onload="start(); galleryStart()">
   <nav id="navbarNav" class="navbar navbar-expand-lg bg-light"></nav>
-  <div class="overlay">
-    <div class="img-overlay">
-      <img src="pictures/dog-picture-2.jpg">
-    </div>
-    <div class="img-overlay-background"></div>
+
+  <div class="container">
+    <span id="active-overlay" style="display: none;">
+      <div onclick="deactivateOverlay()" id="active-overlay-background"></div>
+      <img id="active-overlay-image" src="">
+    </span>
   </div>
-  <div id="picture-field" class="container">
-    <p class="text-center h2"> Gallery </p>
-    <div class="picture-row">
-      <img onclick="resizeImage()" id="img-1" src="pictures/dog-picture-1.jpg" class="img rounded float-start">
-      <img id="img-2" src="pictures/dog-picture-1.jpg" class="img rounded float-end">
-      <img id="img-3" src="pictures/dog-picture-1.jpg" class="img rounded mx-auto d-block">
-    </div>
-    <div class="picture-row">
-      <img id="img-4" src="pictures/dog-picture-1.jpg" class="img rounded float-start">
-      <img id="img-5" src="pictures/dog-picture-1.jpg" class="img rounded float-end">
-      <img id="img-6" src="pictures/dog-picture-1.jpg" class="img rounded mx-auto d-block">
-    </div>
-    <div class="picture-row">
-      <img id="img-7" src="pictures/dog-picture-1.jpg" class="img rounded float-start">
-      <img id="img-8" src="pictures/dog-picture-1.jpg" class="img rounded float-end">
-      <img id="img-9" src="pictures/dog-picture-1.jpg" class="img rounded mx-auto d-block">
-    </div>
-  </div>
+
+
+<div class="container" style="width: 50%;">
+  <p class="text-center h2"> Gallery </p>
+  <table>
+    <tbody class="image-data">
+      <tr>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 
   <Script src="app.js"></Script>
   <Script src="gallery.js"></Script>
