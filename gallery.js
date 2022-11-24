@@ -1,3 +1,6 @@
+
+// Links in the gallery will be put into the table on page load
+//TODO: We need to not load everything at once, and also make it able to go 3 on an X axis, then continue down like that evt.
 const images = ["https://images.all-free-download.com/images/graphicwebp/cute_dog_pet_237595.webp",
 "https://images.all-free-download.com/images/graphicwebp/cute_dog_210049.webp",
 "https://images.all-free-download.com/images/graphicwebp/cute_dog_199763.webp",
