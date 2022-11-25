@@ -1,3 +1,20 @@
+
+#navbarNav {
+  margin-left: 15px;
+}
+
+#navbarLinks a{
+  -webkit-transition: padding 2s;
+}
+
+/**
+Navbar hover functions
+*/
+#navbarLinks a:hover {
+  background-color: #b9ccff;
+  border-radius: 25px;
+}
+
 body{
     background-color: lightblue;
 }
