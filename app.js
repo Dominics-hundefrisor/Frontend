@@ -2,8 +2,7 @@
 //The object with the id 'navBarNav', has its content replaced with '' stuff
 function start() {
     document.querySelector("#navbarNav").innerHTML = 
-    '<div id="navbarNav" class="container-fluid">\
-    <a class="navbar-brand" href="index.html">\
+    '<a class="navbar-brand" href="index.html">\
             <img src="https://svgsilh.com/svg/1484728.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">\
           </a>\
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">\
@@ -27,6 +26,5 @@ function start() {
                 <a class="nav-link active" href="Loginpage.html">Personale login</a>\
               </li>\
             </ul>\
-          </div>\
           </div>'
 }
