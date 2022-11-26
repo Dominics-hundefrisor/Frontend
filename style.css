@@ -1,3 +1,20 @@
+
+#navbarNav {
+  margin-left: 15px;
+}
+
+#navbarLinks a{
+  -webkit-transition: padding 2s;
+}
+
+/**
+Navbar hover functions
+*/
+#navbarLinks a:hover {
+  background-color: #b9ccff;
+  border-radius: 25px;
+}
+
 body{
     background-color: lightblue;
 }
@@ -9,3 +26,129 @@ body{
     margin-bottom: 10%;
 }
 
+body {
+    background-color: lightblue;
+  }
+  
+  @import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
+  body {
+    background: linear-gradient(0deg, #fff, 50%, #deeefe);
+    font-family: "Rubik", sans-serif;
+    background: #455a64;
+    height: 100 !important;
+  }
+  
+  .container-fluid {
+    overflow: hidden;
+    margin-top: 250px;
+    background: #262626;
+    color: #ffffff !important;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  a{
+    color: white;
+  }
+  
+  .instagram {
+    background: #f09433;
+    background: -moz-linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    background: -webkit-linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    background: linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  }
+  
+  small {
+    font-size: calc(
+      12px + (15 - 12) * ((100vw - 360px) / (1600 - 360))
+    ) !important;
+  }
+  
+  .bold-text {
+    color: #989c9e !important;
+  }
+  
+  .fa-facebook {
+    color: #3b5998;
+  }
+  
+  #insta {
+    background: radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+    -webkit-background-clip: text;
+    /* Also define standard property for compatibility */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+   /* change this to change the size*/
+  }
+  #dominic-logo{
+    width: 250px;
+  }
+
+  #dominic-logo1{
+    width: 100px;
+    height: 80px;
+  }
+
+  .mt-55 {
+    margin-top: calc(
+      50px + (60 - 50) * ((100vw - 360px) / (1600 - 360))
+    ) !important;
+  }
+  
+  h3 {
+    font-size: calc(
+      34px + (40 - 34) * ((100vw - 360px) / (1600 - 360))
+    ) !important;
+  }
+
+  #phone{
+    font-size: calc( 12px + (15 - 12) * ((100vw - 360px) / (1600 - 360)) ) !important;
+  }
+
+  #facebook-icon{
+    text-decoration: none;
+  }
+
+  .nav li a{
+    text-decoration:none;
+  }
+  
+  .social {
+    font-size: 35px !important;
+  }
+  
+  .rights {
+    font-size: calc(
+      10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))
+    ) !important;
+  }
+  

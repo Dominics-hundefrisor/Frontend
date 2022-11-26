@@ -1,0 +1,49 @@
+.image-table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+.image-data img{
+    cursor: pointer;
+    width: 50%;
+    margin-bottom: 5%;
+    margin-left: 50%;
+    margin-right: 50%;
+    transform: translateX(-50%);
+}
+
+.image-data img:hover{
+    opacity: 0.85;
+    outline: 2px solid salmon;
+    transition: 0.3s ease;
+}
+
+#active-overlay {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#active-overlay-background{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    opacity: 50%;
+
+}
+
+#active-overlay-image {
+    position: fixed;
+    z-index: 3;
+    top: 50%; right: 50%;
+    transform: translate(50%,-50%);
+    max-width: 90%;
+    max-height: 90%;
+
+}
