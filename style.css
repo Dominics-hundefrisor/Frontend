@@ -1,19 +1,18 @@
-
 #navbarNav {
-  margin-left: 15px;
-}
-
-#navbarLinks a{
-  -webkit-transition: padding 2s;
-}
-
-/**
-Navbar hover functions
-*/
-#navbarLinks a:hover {
-  background-color: #b9ccff;
-  border-radius: 25px;
-}
+    margin-left: 15px;
+  }
+  
+  #navbarLinks a{
+    -webkit-transition: padding 2s;
+  }
+  
+  /**
+  Navbar hover functions
+  */
+  #navbarLinks a:hover {
+    background-color: #b9ccff;
+    border-radius: 25px;
+  }
 
 body{
     background-color: lightblue;
@@ -34,7 +33,7 @@ body {
   body {
     background: linear-gradient(0deg, #fff, 50%, #deeefe);
     font-family: "Rubik", sans-serif;
-    background: #455a64;
+    background: #ffffff;
     height: 100 !important;
   }
   
