@@ -9,7 +9,7 @@ function start() {
             <span class="navbar-toggler-icon"></span>\
           </button>\
           <div class="collapse navbar-collapse" id="navbarLinks">\
-            <ul class="navbar-nav">\
+            <ul class="navbar-nav" style="font-style: italic; font-family: serif;">\
               <li class="nav-item">\
                 <a class="nav-link active" aria-current="page" href="index.html">Forside</a>\
               </li>\
@@ -23,7 +23,7 @@ function start() {
                 <a class="nav-link active" href="galleri.html">Galleri</a>\
               </li>\
               <li class="nav-item">\
-                <a class="nav-link active" href="Loginpage.html">Personale login</a>\
+                <a class="nav-link active" href="Loginpage.html">Personalelogin</a>\
               </li>\
             </ul>\
           </div>'
