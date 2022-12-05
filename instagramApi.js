@@ -13,6 +13,8 @@ fetch("https://v1.nocodeapi.com/aps/instagram/pjCNBSyiUmzTFIzO", requestOptions)
     // Parse the JSON response and extract the photo URLs
     const photoUrls = result.data.map((photo) => photo.media_url);
 
+    galleryStart(photoUrls)
+
     // Create img elements for each photo
     const photoElements = photoUrls.map((url) => {
       const imgElement = document.createElement("img");
