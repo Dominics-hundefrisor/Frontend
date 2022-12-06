@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Day #3 - Drag and Drop Image</title>
+	<!-- include bootstrap -->
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<!-- include css -->
+	<link rel="stylesheet" type="text/css" href="site-settings-style.css">
+</head>
+<body>
+<div class="container ">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="uploadOuter">
+				<label for="uploadFile" class="btn btn-primary">
+					Upload Image
+				</label>
+				<strong>OR</strong>
+			
+			<span class="dragBox">
+				Drag and Drop Image here
+				<input type="file" onChange="dragNdrop(event)"
+				ondragover="drag()"
+				ondrop="drop()" 
+				id="uploadFile" 
+				>
+			</span>
+			</div>
+			<div id="preview"></div>
+		</div>
+	</div>
+</div>
+<script src="site-settings-script.js"></script>
+</body>
+</html>
