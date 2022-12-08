@@ -19,9 +19,11 @@ function getInfo() {
 
     for (let i = 0; i < objPeople.length; i++) {
         if(username == objPeople[i].username && password == objPeople[i].password) {
-            window.location.href = "index.html"
+           const user = objPeople[i].username;
+            window.location.href = "adminpage.html"
             return
         }
     }
+
     document.getElementById("login-heading").innerHTML = "Incorrect username or password"
 }
