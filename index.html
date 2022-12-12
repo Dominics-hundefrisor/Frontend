@@ -7,7 +7,7 @@
     <title>Forside</title>
     <link rel="stylesheet" href="index-style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-</head>
+  </head>
 <body onload="start()">
     <nav id="navbarNav" class="navbar navbar-expand-sm bg-light sticky-top"></nav>
       <main>
@@ -33,7 +33,7 @@
                     <p>Ring eller skriv:</p>
                   </div>
                   <div class="row">
-                    <a href"tel:52601056">+45 52 60 10 56</a>
+                    <a href="tel:52601056">+45 52 60 10 56</a>
                   </div>  
                 </div>
               </div>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-auto align-self-center">
                   <p>Jydeholmen 46, 2720 København</p>
-                </div>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1891.3763020235058!2d12.482637382964464!3d55.68484389770931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe24cb19a1869a47!2sDominic&#39;s%20hundefris%C3%B8r!5e0!3m2!1sda!2sdk!4v1669890981337!5m2!1sda!2sdk" width="250" height="150" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
               </div>
             </div>
           </div>
@@ -71,8 +71,9 @@
               <!--lav evt. med handlebars-->
             </div>
             <div class="col align-self-center" id="reviews">
-              <h3>--Facebook eller google reviews--</h3>
-              <!--indsæt facebook eller google api-->
+              <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fangel.palma.739%2Fposts%2Fpfbid02fX4QUVKweNdnepTYho4sYkEkzTTzhP1YfhTzBvSZxDbECA4Xpdi5s8vSabCjeCzgl&show_text=true&width=500" width="250" height="186" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+              <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02WT6zKgASTa4mJNREvoS34nwDGNiNdZ6YieNjHnQJAfmuVWdu3x6Pcdkr5ByGRNsnl%26id%3D100052281138156&show_text=true&width=500" width="250" height="186" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+              <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Ftine.lindholm.7%2Fposts%2Fpfbid0H3Jx2GCcCdUUCV6KwUziigrna4YE3wcxmMw6Ecgou3hqcyG8wHG1P4Leosy2DJT9l&show_text=true&width=500" width="250" height="186" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
             </div>
           </div>
           <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
@@ -133,6 +134,19 @@
           </div>
         </div>
       </main>
+      <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoidG9ieS1ieXRlIiwiYSI6ImNsYjNpaG9yZjAwazgzbnBkY2kwbXF6cHUifQ.JAyQFZaSpFBQeJuV_tpJog';
+        var map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/mapbox/streets-v11',
+          center: [12.483999, 55.685046],
+          zoom: 14
+        });
+      
+        const marker1 = new mapboxgl.Marker()
+          .setLngLat([12.483999, 55.685046])
+          .addTo(map);
+      </script>
       <script src="app.js"></Script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
