@@ -11,32 +11,35 @@
 <body onload="start()">
     <nav id="navbarNav" class="navbar navbar-expand-lg bg-light"></nav>
     <h2 class="fancy-font">Priser fra 1. januar 2023:</h2>
+    <button onclick="document.location='priser med input.html'">Go to edit prices</button>
+
     <!-- List group sektioner fra bootstrap til at vise priser -->
-    <h3 class="fancy-font">Klip</h3>
+    <h3 id="student1" class="fancy-font">Klip</h3>
     <ul class="list-group">
-      <li class="list-group-item">Op til 12 kg - 700 kr (Havanese, Maltes og Yorkshire)</li>
-      <li class="list-group-item">12 kg til 18 kg - 800 kr (Schnauzer og Labradoodle.)</li>
-      <li class="list-group-item">Over 18 kg - 950 kr (G. Retriever, Schæferhund)</li>
-      <li class="list-group-item">Klip af negle - 200 kr</li>
+      <li class="list-group-item">Op til 12 kg (Havanese, Maltes og Yorkshire) - <span id="klip-1"> 700 kr</span></li>
+      <li class="list-group-item">12 kg til 18 kg (Schnauzer og Labradoodle.) - <span id="klip-2"> 800 kr</span></li>
+      <li class="list-group-item">Over 18 kg (G. Retriever, Schæferhund) - <span id="klip-3"> 950 kr</span></li>
+      <li class="list-group-item">Klip af negle - <span id="klip-4"> 200 kr</span></li></li>
     </ul>
     
     <h3 class="fancy-font">Trimming</h3>
     <ul class="list-group">
-      <li class="list-group-item">Op til 12 kg - 850 kr (Gravhund, West, Highland Terrier)</li>
+      <li class="list-group-item">Op til 12 kg (Gravhund, West, Highland Terrier) - <span id="trimming-1"> 850 kr</span></li>
     </ul>
 
     <h3 class="fancy-font">Touch up, inkluderer øjen-. mave- og numsetrimning</h3>
     <ul class="list-group">
-      <li class="list-group-item">Op til 12 kg - 550 kr</li>
-      <li class="list-group-item">Fra 12 kg til 18 kg - 650 kr</li>
+      <li class="list-group-item">Op til 12 kg - <span id="Touch-up-1"> 550 kr</span></li>
+      <li class="list-group-item">Fra 12 kg til 18 kg - <span id="Touch-up-2"> 550 kr</span></li>
     </ul>
 
     <h3 class="fancy-font">Tillæg</h3>
     <ul class="list-group">
-      <li class="list-group-item">250 kr - hvis hunden har lopper eller flåter</li>
+      <li class="list-group-item">hvis hunden har lopper eller flåter - <span id="Tillæg-1"> 250 kr</span></li>
     </ul>
 
     <Script src="app.js"></Script>
+    <script src="fetch-test.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
