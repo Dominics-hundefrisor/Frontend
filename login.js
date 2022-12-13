@@ -1,3 +1,4 @@
+
 var objPeople = [
     {
         username: "Tobias",
@@ -44,6 +45,11 @@ const postUserDetails = async (username, password) => {
       if (response.ok) {
         console.log("access granted");
         const jsonResponse = await response.json();
+        const { token } = jsonResponse;
+        console.log(token);
+        localStorage.setItem("token", token);
+        window.location("http://localhost:8080/hi");
+        console.log(jsonResponse);
       }
     } catch (error) {
       console.log(error);
