@@ -59,9 +59,10 @@ function fetchContact(){
     });
   }
 
-  function something() {
-    return document.getElementById("input-id").value;
+  function getDeleteInput() {
+    return document.getElementById("input-id-delete").value;
   }
+
 
   // post
   const form = document.getElementById('form')
@@ -90,7 +91,7 @@ function fetchContact(){
    console.log('data object')
    console.log(bookingDataObject)
    console.log(typeof bookingDataObject.phoneNumber)
-   postForm('http://localhost:8080/api/v1/contact/add', bookingDataObject)
+   postForm('http://localhost:8080/api/v1/contact', bookingDataObject)
 }
 
 async function postForm(url, formObject)
@@ -106,4 +107,96 @@ async function postForm(url, formObject)
       body: JSON.stringify(formObject)
    })
 }
+// patch
+function patchContact(id, field1, field2, field3){
+  console.log("field 1: " + field1)
+  console.log("field 2: " + field2)
+  console.log("field 3: " + field3)
+  if(field1 != ""){
+    patchPhoneNumber(id, field1)
+  }
+  if(field2 != ""){
+    patchEmail(id, field2)
+  }
+  if(field3 != ""){
+    patchAddress(id, field3)
+  }
+}
 
+function patchPhoneNumber(id, value) {
+  console.log("PATCHING PHONENUMBER")
+  console.log("patching : (" + id + ")")
+    const responseFlow = fetch("http://localhost:8080/api/v1/contact/" + id, {
+      method: "PATCH",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      // The content to update
+      body: JSON.stringify({
+        phoneNumber: value
+      })
+    })
+}
+
+function patchEmail(id, value) {
+  console.log("patching : (" + id + ")")
+    const responseFlow = fetch("http://localhost:8080/api/v1/contact/" + id, {
+      method: "PATCH",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      // The content to update
+      body: JSON.stringify({
+        email: value
+      })
+    })
+}
+function patchAddress(id, value) {
+  console.log("patching : (" + id + ")")
+    const responseFlow = fetch("http://localhost:8080/api/v1/contact/" + id, {
+      method: "PATCH",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      // The content to update
+      body: JSON.stringify({
+        address: value
+      })
+    })
+}
+
+function getPatchInput() {
+  return document.getElementById("input-id-patch").value;
+}
+function getPatchPhoneNumber() {
+  return document.getElementById("input-phoneNumber-patch").value;
+}
+function getPatchEmail() {
+  return document.getElementById("input-email-patch").value;
+}
+function getPatchAddress() {
+  return document.getElementById("input-address-patch").value;
+}
+
+function fetchContact2(){
+  fetch("http://localhost:8080/api/v1/contact/" + document.getElementById('input-id-patch').value)
+    .then((response) => response.json())
+    .then((contact) => {
+    let html = "";
+      html += `
+         <tbody>
+           <tr>
+             <td>${contact.id}</td>
+             <td>${contact.phoneNumber}</td>
+             <td>${contact.email} </td>
+             <td>${contact.address} </td>
+          </tr>
+        </tbody>`
+        document.querySelector(".contactTable3").innerHTML = html
+    });
+  };
+
+
+// put
+
+// patch
