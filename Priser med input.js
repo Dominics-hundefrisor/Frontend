@@ -2,7 +2,7 @@ function UpdatePrice(id,newPrice,html_tag) {
     // remember to go back to http://localhost:8080 instead of webapp for testing locally
     // remember to go back to https://tobias-spring-projekt-service.azurewebsites.net instead of webapp for testing on server
 
-    let url = "http://localhost:8080/api/v1/price/updatePriceById/" + id;
+    let url = "http://localhost:8080/api/v1/price/" + id;
 
     let payload = {
             price_id: id,
