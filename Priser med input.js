@@ -1,4 +1,7 @@
 function UpdatePrice(id,newPrice,html_tag) {
+    // remember to go back to http://localhost:8080 instead of webapp for testing locally
+    // remember to go back to https://tobias-spring-projekt-service.azurewebsites.net instead of webapp for testing on server
+
     let url = "http://localhost:8080/api/v1/price/updatePriceById/" + id;
 
     let payload = {
@@ -42,18 +45,18 @@ document.getElementById("myButton").onclick = function(){
     // document.getElementById("klip-4").innerHTML = klip_4 + " kr";
     UpdatePrice(1,klip_1,"klip-1");
     UpdatePrice(2,klip_2,"klip-2");
-    UpdatePrice(4,klip_3,"klip-3");
-    UpdatePrice(5,klip_4,"klip-4");
+    UpdatePrice(3,klip_3,"klip-3");
+    UpdatePrice(4,klip_4,"klip-4");
 
     // document.getElementById("trimming-1").innerHTML = trimming_1 + " kr";
-    UpdatePrice(6,trimming_1,"trimming-1");
+    UpdatePrice(5,trimming_1,"trimming-1");
 
     // document.getElementById("Touch-up-1").innerHTML = Touch_up_1 + " kr";
     // document.getElementById("Touch-up-2").innerHTML = Touch_up_2 + " kr";
-    UpdatePrice(7,Touch_up_1,"Touch-up-1");
-    UpdatePrice(8,Touch_up_2,"Touch-up-2");
+    UpdatePrice(6,Touch_up_1,"Touch-up-1");
+    UpdatePrice(7,Touch_up_2,"Touch-up-2");
 
     // document.getElementById("Tillæg-1").innerHTML = Tillæg_1 + " kr";
-    UpdatePrice(9,Tillæg_1,"Tillæg-1");
+    UpdatePrice(8,Tillæg_1,"Tillæg-1");
 }
 

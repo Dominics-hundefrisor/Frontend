@@ -1,4 +1,3 @@
-
 var objPeople = [
     {
         username: "Tobias",
@@ -13,7 +12,10 @@ var objPeople = [
         password: "arbejde"
     }
 ]
-
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('submit').addEventListener('click', sendReq);
+    //pretend to get a token after logging in
+});
 function getInfo() {
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
@@ -31,6 +33,8 @@ function getInfo() {
     }*/
 }
 
+
+
 const postUserDetails = async (username, password) => {
     const url = 'http://localhost:8080/login';
     const data = JSON.stringify({ username: username, password: password});
@@ -47,8 +51,9 @@ const postUserDetails = async (username, password) => {
         const jsonResponse = await response.json();
         const { token } = jsonResponse;
         console.log(token);
-        localStorage.setItem("token", token);
-        window.location("http://localhost:8080/hi");
+        sessionStorage.setItem("token", JSON.stringify(token));
+        sendReq("http://localhost:8080/hi");
+        /*window.location("http://localhost:8080/hi");*/
         console.log(jsonResponse);
       }
     } catch (error) {
@@ -56,4 +61,26 @@ const postUserDetails = async (username, password) => {
       return false;
     }
     document.getElementById("login-heading").innerHTML = "Incorrect username or password"
+}
+
+let sendReq = (url) => {
+    let token = JSON.parse(sessionStorage.getItem('token'));
+
+    let h = new Headers();
+    h.append('Authorization', `Bearer ${token}`);
+    h.append('mode', 'no-cors');
+
+    let req = new Request(url, {
+        method: 'GET',
+        mode: 'cors',
+        headers: h
+    });
+    fetch(req)
+        .then(resp => resp.json())
+        .then(data => {
+            console.log(data[0]);
+        })
+        .catch(err => {
+            console.error(err.message);
+        })
 }
