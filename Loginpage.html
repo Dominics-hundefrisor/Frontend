@@ -17,16 +17,18 @@
         <form>
         <!-- Username input -->
         <div class="form-outline mb-4">
-          <input type="text" id="username" class="form-control" placeholder="Brugernavn"/>
+          <input type="text" id="username1" class="form-control" placeholder="Brugernavn"/>
         </div>
       
         <!-- Password input -->
         <div class="form-outline mb-4">
           <input type="password" id="password" class="form-control" placeholder="Kode" />
         </div>
+
+        <p id="loginMessage"></p>
       
         <!-- Submit button -->
-        <button type="button" class="btn btn-primary btn-block mb-4" id="submit" onclick="getInfo()">Log ind</button>
+        <button type="button" class="btn btn-primary btn-block mb-4" id="submit" onclick="checkLogin()">Log ind</button>
       </form>
     </div>
 

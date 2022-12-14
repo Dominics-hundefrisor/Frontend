@@ -1,4 +1,4 @@
-var objPeople = [
+/*var objPeople = [
     {
         username: "Tobias",
         password: "pass"
@@ -30,7 +30,7 @@ function getInfo() {
             window.location.href = "adminpage.html"
             return
         }
-    }*/
+    }
 }
 
 
@@ -45,6 +45,13 @@ const putPostOrPatchValue = async (url, data, method) => {
       });
       if (response.ok) {
         console.log("access granted");
+        const jsonResponse = await response.json();
+        const { token } = jsonResponse;
+        console.log(token);
+        sessionStorage.setItem("token", JSON.stringify(token));
+        sendReq("http://localhost:8080/hi");
+        /*window.location("http://localhost:8080/hi");*/
+        console.log(jsonResponse);
       }
     } catch (error) {
       console.log(error);
@@ -53,3 +60,18 @@ const putPostOrPatchValue = async (url, data, method) => {
     document.getElementById("login-heading").innerHTML = "Incorrect username or password"
 }
 
+
+    let req = new Request(url, {
+        method: 'GET',
+        mode: 'cors',
+        headers: h
+    });
+    fetch(req)
+        .then(resp => resp.json())
+        .then(data => {
+            console.log(data[0]);
+        })
+        .catch(err => {
+            console.error(err.message);
+        })
+}

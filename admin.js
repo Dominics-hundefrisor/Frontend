@@ -1,8 +1,6 @@
 const div = document.getElementById("admin")
 const text = "test"
 
-localStorage.setItem("USERNAME", "KODE" )
-
 function updateInfo(phone){
     console.log(phone.value);
 }
