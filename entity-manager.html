@@ -11,10 +11,8 @@
 </head>
 
 <body>
-
     <!-- Get All -->
     <button onclick="fetchContacts()"> getAll Test </button>
-
     <button> get Test </button>
 
     <h3> Get All</h3>
@@ -52,15 +50,15 @@
         </tbody>
     </table>
 
-    <!-- Delete -->
     <label for="contact-id"> Contact Id</label>
     <input type="text" id="contact-id" name="contact-id">
 
     <button onclick="fetchContact()"> Get Contact </button>
 
+    <!-- Delete -->
     <h3> Delete Contact</h3>
-    <input id="input-id" value="" placeholder="contact-id-delete"> </input>
-          <button type="button" onclick="deleteContact(something())">
+    <input id="input-id-delete" value="" placeholder="contact-id-delete"> </input>
+          <button type="button" onclick="deleteContact(getDeleteInput())">
             Slet booking
           </button>
 
@@ -77,6 +75,51 @@
 
         <button type="submit" value="Submit" class="btn btn-primary gokart-booking-btn" id="submit-btn">Book</button>
     </form>
+
+    <!-- Patch -->
+    <h3>Patch Contact</h3>
+    <h3> Get</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Tlf. Nummer</th>
+                <th>Address</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody class="contactTable3">
+            <tr>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <label for="input-id-patch"> Contact Id</label>
+    <input onchange="fetchContact2()" type="text" id="input-id-patch" name="input-id-patch">
+    <button onclick="fetchContact2()"> Update </button>
+
+
+    <div>
+    <input id="input-phoneNumber-patch" value="" placeholder="contact-phoneNumber-patch"> </input>
+    <button type="button" onclick="patchPhoneNumber(getPatchInput(), getPatchPhoneNumber())">
+        Change Phone Number
+      </button>
+    </div>
+    <div>
+    <input id="input-email-patch" value="" placeholder="contact-email-patch"> </input>
+    <button type="button" onclick="patchPhoneNumber(getPatchInput(), getPatchPhoneNumber())">
+        Change Email
+      </button>
+    </div>
+    <div>
+    <input id="input-address-patch" value="" placeholder="contact-address-patch"> </input>
+    <button type="button" onclick="patchPhoneNumber(getPatchInput(), getPatchPhoneNumber())">
+        Change Address
+      </button>
+    </div>
+    
+    <!-- Put -->
 
 </body>
 
