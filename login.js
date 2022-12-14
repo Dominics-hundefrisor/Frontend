@@ -1,4 +1,4 @@
-var objPeople = [
+/*var objPeople = [
     {
         username: "Tobias",
         password: "pass"
@@ -103,7 +103,7 @@ function checkLogin(){
     var data = JSON.parse(user);
 
     if(user == null){
-        console.log("fell");
+        console.log("Error");
     }else if (input1 == data.username && input2 == data.password){
         loginMessage.style.color = "green";
         loginMessage.style.textAlign = "center";
