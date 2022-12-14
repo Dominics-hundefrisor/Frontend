@@ -7,8 +7,11 @@ function updateInfo(){
     const phone = "+45 52 60 10 56"
 }
 
+
+
 function updatePhone(){
-    console.log("test");
+    console.log("test")
+    let phone = document.getElementById("phone").value;
 }
 
 function updateEmail(){
@@ -18,5 +21,4 @@ function updateEmail(){
 function updateAddress(){
     console.log("test");
 }
-
 
