@@ -3,15 +3,14 @@ const text = "test"
 
 localStorage.setItem("USERNAME", "KODE" )
 
-function updateInfo(){
-    const phone = "+45 52 60 10 56"
+function updateInfo(phone){
+    console.log(phone.value);
 }
 
-
-
 function updatePhone(){
-    console.log("test")
     let phone = document.getElementById("phone").value;
+    let phoneNumber = JSON.stringify({phoneNumber: phone});
+    putPostOrPatchValue("http://localhost:8080/api/v1/contact/update-phone", phoneNumber, 'PUT');
 }
 
 function updateEmail(){
@@ -22,3 +21,23 @@ function updateAddress(){
     console.log("test");
 }
 
+const putPostOrPatchValue = async (url, data, method) => {
+    try {
+      const response = await fetch(url, {
+        method: `${method}`,
+        body: data,
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            "Content-type": "application/json",
+            'Accept': "application/json"
+          }
+      });
+      if (response.ok) {
+        console.log("access granted");
+      }
+    } catch (error) {
+      console.log(error);
+      return false;
+    }
+    document.getElementById("login-heading").innerHTML = "Incorrect username or password"
+}
