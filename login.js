@@ -1,4 +1,4 @@
-/*var objPeople = [
+var objPeople = [
     {
         username: "Tobias",
         password: "pass"
