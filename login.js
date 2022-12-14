@@ -24,7 +24,7 @@ function getInfo() {
     if(!isSuccessful) {
         document.getElementById("login-heading").innerHTML = "Incorrect username or password";
     }
-    /*for (let i = 0; i < objPeople.length; i++) {
+    for (let i = 0; i < objPeople.length; i++) {
         if(username == objPeople[i].username && password == objPeople[i].password) {
            const user = objPeople[i].username;
             window.location.href = "adminpage.html"
@@ -74,4 +74,3 @@ const putPostOrPatchValue = async (url, data, method) => {
         .catch(err => {
             console.error(err.message);
         })
-}
