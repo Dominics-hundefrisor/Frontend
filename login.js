@@ -1,4 +1,4 @@
-var objPeople = [
+/*var objPeople = [
     {
         username: "Tobias",
         password: "pass"
@@ -51,6 +51,7 @@ const putPostOrPatchValue = async (url, data, method) => {
         sessionStorage.setItem("token", JSON.stringify(token));
         sendReq("http://localhost:8080/hi");
         /*window.location("http://localhost:8080/hi");*/
+        /*
         console.log(jsonResponse);
       }
     } catch (error) {
@@ -74,3 +75,4 @@ const putPostOrPatchValue = async (url, data, method) => {
         .catch(err => {
             console.error(err.message);
         })
+}
