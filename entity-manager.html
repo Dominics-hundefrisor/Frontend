@@ -11,10 +11,10 @@
 </head>
 
 <body>
+
     <!-- Get All -->
     <button onclick="fetchContacts()"> getAll Test </button>
     <button> get Test </button>
-
     <h3> Get All</h3>
     <table>
         <thead>
@@ -52,7 +52,6 @@
 
     <label for="contact-id"> Contact Id</label>
     <input type="text" id="contact-id" name="contact-id">
-
     <button onclick="fetchContact()"> Get Contact </button>
 
     <!-- Delete -->
@@ -78,7 +77,6 @@
 
     <!-- Patch -->
     <h3>Patch Contact</h3>
-    <h3> Get</h3>
     <table>
         <thead>
             <tr>
@@ -108,18 +106,18 @@
     </div>
     <div>
     <input id="input-email-patch" value="" placeholder="contact-email-patch"> </input>
-    <button type="button" onclick="patchPhoneNumber(getPatchInput(), getPatchPhoneNumber())">
+    <button type="button" onclick="patchEmail(getPatchInput(), getPatchEmail())">
         Change Email
       </button>
     </div>
     <div>
     <input id="input-address-patch" value="" placeholder="contact-address-patch"> </input>
-    <button type="button" onclick="patchPhoneNumber(getPatchInput(), getPatchPhoneNumber())">
+    <button type="button" onclick="patchAddress(getPatchInput(), getPatchAddress())">
         Change Address
       </button>
     </div>
     
-    <!-- Put -->
+    <!-- Put(Tror ikke vi laver det) -->
 
 </body>
 

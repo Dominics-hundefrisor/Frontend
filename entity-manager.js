@@ -45,8 +45,6 @@ function fetchContact(){
   
   // delete
   function deleteContact(id){
-    console.log('delete begin')
-    console.log('id : ' + id)
     fetch("http://localhost:8080/api/v1/contact/" + id, {
     method: "DELETE",
   })
@@ -72,7 +70,6 @@ function fetchContact(){
 
 
   function validateBookingForm(e) {
-    console.log('validating')
     e.preventDefault()
     createBookingDataObject()
   }
@@ -88,16 +85,10 @@ function fetchContact(){
     email: email
    }
 
-   console.log('data object')
-   console.log(bookingDataObject)
-   console.log(typeof bookingDataObject.phoneNumber)
    postForm('http://localhost:8080/api/v1/contact', bookingDataObject)
 }
 
-async function postForm(url, formObject)
-{
-  console.log('post form')
-  console.log(formObject)
+async function postForm(url, formObject) {
    let response = await fetch(url, {
       method: 'POST',
       headers: {
@@ -109,9 +100,6 @@ async function postForm(url, formObject)
 }
 // patch
 function patchContact(id, field1, field2, field3){
-  console.log("field 1: " + field1)
-  console.log("field 2: " + field2)
-  console.log("field 3: " + field3)
   if(field1 != ""){
     patchPhoneNumber(id, field1)
   }
@@ -124,8 +112,6 @@ function patchContact(id, field1, field2, field3){
 }
 
 function patchPhoneNumber(id, value) {
-  console.log("PATCHING PHONENUMBER")
-  console.log("patching : (" + id + ")")
     const responseFlow = fetch("http://localhost:8080/api/v1/contact/" + id, {
       method: "PATCH",
       headers: {
@@ -139,7 +125,6 @@ function patchPhoneNumber(id, value) {
 }
 
 function patchEmail(id, value) {
-  console.log("patching : (" + id + ")")
     const responseFlow = fetch("http://localhost:8080/api/v1/contact/" + id, {
       method: "PATCH",
       headers: {
