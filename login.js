@@ -62,25 +62,3 @@ const postUserDetails = async (username, password) => {
     }
     document.getElementById("login-heading").innerHTML = "Incorrect username or password"
 }
-
-let sendReq = (url) => {
-    let token = JSON.parse(sessionStorage.getItem('token'));
-
-    let h = new Headers();
-    h.append('Authorization', `Bearer ${token}`);
-    h.append('mode', 'no-cors');
-
-    let req = new Request(url, {
-        method: 'GET',
-        mode: 'cors',
-        headers: h
-    });
-    fetch(req)
-        .then(resp => resp.json())
-        .then(data => {
-            console.log(data[0]);
-        })
-        .catch(err => {
-            console.error(err.message);
-        })
-}
