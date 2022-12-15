@@ -39,24 +39,16 @@ document.getElementById("myButton").onclick = function(){
     Tillæg_1 = document.getElementById("Tillæg-1-change").value;
 
     // changing HTML element contents
-    // document.getElementById("klip-1").innerHTML = klip_1 + " kr";
-    // document.getElementById("klip-2").innerHTML = klip_2 + " kr";
-    // document.getElementById("klip-3").innerHTML = klip_3 + " kr";
-    // document.getElementById("klip-4").innerHTML = klip_4 + " kr";
     UpdatePrice(1,klip_1,"klip-1");
     UpdatePrice(2,klip_2,"klip-2");
     UpdatePrice(3,klip_3,"klip-3");
     UpdatePrice(4,klip_4,"klip-4");
 
-    // document.getElementById("trimming-1").innerHTML = trimming_1 + " kr";
     UpdatePrice(5,trimming_1,"trimming-1");
 
-    // document.getElementById("Touch-up-1").innerHTML = Touch_up_1 + " kr";
-    // document.getElementById("Touch-up-2").innerHTML = Touch_up_2 + " kr";
     UpdatePrice(6,Touch_up_1,"Touch-up-1");
     UpdatePrice(7,Touch_up_2,"Touch-up-2");
 
-    // document.getElementById("Tillæg-1").innerHTML = Tillæg_1 + " kr";
     UpdatePrice(8,Tillæg_1,"Tillæg-1");
 }
 
