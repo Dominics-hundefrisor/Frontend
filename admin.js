@@ -31,7 +31,7 @@ function postNews() {
 }
 
 function deleteNews(id) {
-    putPostOrPatchValue('http://localhost:8080/news/delete/' + id, null,'DELETE');
+    putPostOrPatchValue('https://hf-jpa.azurewebsites.net/news/delete/' + id, null,'DELETE');
 }
 
 function updateAddress(){
