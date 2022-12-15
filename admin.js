@@ -1,22 +1,21 @@
-const div = document.getElementById("admin")
-const text = "test"
-
-function updateInfo(phone){
-    console.log(phone.value);
-}
 
 function updatePhone(){
+
     let phone = document.getElementById("phone").value;
     let phoneNumber = JSON.stringify({phoneNumber: phone});
     putPostOrPatchValue("http://localhost:8080/api/v1/contact/update-phone", phoneNumber, 'PUT');
 }
 
 function updateEmail(){
-
+  let email = document.getElementById("email").value;
+  let emails = JSON.stringify({email: email});
+  putPostOrPatchValue("http://localhost:8080/api/v1/contact/update-email", emails, 'PUT');
 }
 
 function updateAddress(){
-    console.log("test");
+  let address = document.getElementById("adresse").value;
+  let adresse = JSON.stringify({address: address});
+  putPostOrPatchValue("http://localhost:8080/api/v1/contact/update-address", adresse, 'PUT');
 }
 
 const putPostOrPatchValue = async (url, data, method) => {
