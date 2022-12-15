@@ -12,7 +12,7 @@ function updatePhone(){
 }
 
 function updateEmail(){
-    console.log("test")
+
 }
 
 function updateAddress(){
