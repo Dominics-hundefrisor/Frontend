@@ -27,10 +27,8 @@ function postNews() {
     let newsText = document.getElementById("textArea").value;
     let newsDate = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
     let newsJSON = JSON.stringify({title: newsTitle, text: newsText, date: newsDate});
-    putPostOrPatchValue("http://localhost:8080/news/post-news",newsJSON,"POST");
+    putPostOrPatchValue("https://hf-jpa.azurewebsites.net/news/post-news",newsJSON,"POST");
 }
-
-
 
 function deleteNews(id) {
     putPostOrPatchValue('http://localhost:8080/news/delete/' + id, null,'DELETE');
