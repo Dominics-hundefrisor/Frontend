@@ -13,7 +13,7 @@ input[type=text], input[type=tel], input[type=email]:focus {
     margin: 5px 1px 3px 0px;
     border: 1px solid #DDDDDD;
   }
-   
+
   input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus {
     box-shadow: 0 0 5px rgba(81, 203, 238, 1);
     padding: 3px 0px 3px 3px;
@@ -28,5 +28,8 @@ input[type=text], input[type=tel], input[type=email]:focus {
     display: block;
   }
   #label3{
+    display: block;
+  }
+  #label4{
     display: block;
   }

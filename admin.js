@@ -1,5 +1,5 @@
-const div = document.getElementById("admin")
-const text = "test"
+const div = document.getElementById("admin");
+const text = "test";
 
 function updateInfo(phone){
     console.log(phone.value);
@@ -7,19 +7,34 @@ function updateInfo(phone){
 
 function updatePhone(){
     let phone = document.getElementById("phone").value;
-    let phoneNumber = JSON.stringify({phoneNumber: phone});
-    putPostOrPatchValue("http://localhost:8080/api/v1/contact/update-phone", phoneNumber, 'PUT');
+    let phoneJSON = JSON.stringify({phoneNumber: phone});
+    putPostOrPatchData("https://hf-jpa.azurewebsites.net/api/v1/contact/update-phone", phoneJSON, 'PUT');
 }
 
 function updateEmail(){
 
 }
 
+function postNews() {
+    const date = new Date();
+    let newsTitle = document.getElementById("header").value;
+    let newsText = document.getElementById("textArea").value;
+    let newsDate = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
+    let newsJSON = JSON.stringify({title: newsTitle, text: newsText, date: newsDate});
+    putPostOrPatchData("http://localhost:8080/news/post-news",newsJSON,"POST");
+}
+
+
+
+function deleteNews(id) {
+    putPostOrPatchData('http://localhost:8080/news/delete/' + id, null,'DELETE');
+}
+
 function updateAddress(){
     console.log("test");
 }
 
-const putPostOrPatchValue = async (url, data, method) => {
+const putPostOrPatchData = async (url, data, method) => {
     try {
       const response = await fetch(url, {
         method: `${method}`,

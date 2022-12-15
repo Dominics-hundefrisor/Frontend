@@ -75,10 +75,12 @@ h3#contact {
     font-style: italic;
     font-family: serif;
 }
-#reviews, #news {
+#reviews {
     padding-top: 10px;
 }
-
+.facebook {
+    height: 300px;
+}
 #quote {
     font-size: 13px;
     font-style: italic;
