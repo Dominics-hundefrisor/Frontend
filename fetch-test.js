@@ -1,8 +1,8 @@
 // url for api
     // remember to go back to http://localhost:8080 instead of webapp for testing locally
-    // remember to go back to https://tobias-spring-projekt-service.azurewebsites.net instead of webapp for testing on server
+    // remember to go back to https://hf-jpa.azurewebsites.net instead of local for testing on server
 
-const api_url = 'http://localhost:8080/api/v1/price/';
+const api_url = 'https://hf-jpa.azurewebsites.net/api/v1/price/';
 
 async function getPriceInfo (id,item) {
     const response = await fetch(api_url + id);

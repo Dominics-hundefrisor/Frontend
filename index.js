@@ -1,4 +1,4 @@
-const api_url = 'http://localhost:8080/api/v1/openinghours/';
+const api_url = 'https://hf-jpa.azurewebsites.net/api/v1/openinghours/';
 
 async function getOpeninghoursInfo (id) {
     const response = await fetch(api_url + id);
