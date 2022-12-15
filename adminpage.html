@@ -37,9 +37,12 @@
         height: 35px;
         font-size: 10px;" />
       </p>
+      <p id="phoneMessage"></p>
       <button onclick="updatePhone()" style="width: 7%;
       background-color: midnightblue;
       color: white;
+      height: 20px;
+      cursor: pointer;
       font-size: x-small;
       border: 1px solid black;">Opdater Telefon</button>
       <div>
@@ -51,9 +54,12 @@
         border: 1px solid white;
         " /> 
       </p>
+      <p id="emailMessage"></p>
       <button onclick="updateEmail()" style="width: 7%;
       background-color: midnightblue;
       color: white;
+      height: 20px;
+      cursor: pointer;
       font-size: x-small;
       border: 1px solid black;">Opdater Email</button>
       <p>
@@ -61,17 +67,30 @@
         <input
           type="text"
           name="address"
-          id="test"
+          id="adresse"
           autocomplete="street-address" style="width: 20%;
           height: 35px;
           font-size: 10px;" placeholder="Jydeholmen 46, 2720 Vanløse"
           onclick=""
         />
       </p>
+      <p id="addressMessage"></p>
       <button onclick="updateAddress()" style="width: 7%;
       background-color: midnightblue;
       color: white;
+      height: 20px;
+      cursor: pointer;
       font-size: x-small;
+      border: 1px solid black;">Opdater Adresse </button><br>
+      
+      <button onclick="document.location='priser med input.html'" style="width: 7%;
+      background-color: midnightblue;
+      color: white;
+      height: 20px;
+      display: grid;
+      cursor: pointer;
+      border: 1px solid black;
+      margin-top: 2%;">Ændre priser</button>
       border: 1px solid black;">Opdater Adresse </button>
 
       <div class="container">

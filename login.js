@@ -24,14 +24,14 @@ function checkLogin(){
     var user = sessionStorage.getItem(username);
     var data = JSON.parse(user);
 
-    if(user == null){
+    if (user == null){
         console.log("Error");
-    }else if (input1 == data.username && input2 == data.password){
+    } else if (input1 == data.username && input2 == data.password){
         loginMessage.style.color = "green";
         loginMessage.style.textAlign = "center";
         loginMessage.innerHTML = "Succes";
         document.location.pathname = "adminpage.html"
-    }else {
+    } else {
         loginMessage.style.color = "red";
         loginMessage.style.textAlign = "center";
         loginMessage.innerHTML = "Forkert kode";
