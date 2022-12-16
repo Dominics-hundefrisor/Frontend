@@ -20,6 +20,7 @@ function postNews() {
     let newsText = document.getElementById("textArea").value;
     let newsDate = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
     let newsJSON = JSON.stringify({title: newsTitle, text: newsText, date: newsDate});
+    console.log(newsJSON)
     putPostOrPatchValue("https://hf-jpa.azurewebsites.net/news/post-news",newsJSON,"POST");
 }
 
