@@ -1,5 +1,3 @@
-//When the body of an html page s loaded, it is instructed to activate 'start()'
-//The object with the id 'navBarNav', has its content replaced with '' stuff
 function start() {
     document.querySelector("#navbarNav").innerHTML = 
     '<a class="navbar-brand" href="index.html">\
