@@ -15,8 +15,6 @@
     ></script>
     <!---->
     <link rel="stylesheet" href="admin.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   </head>
   <body style="background: gainsboro">
     <i class="fa-solid fa-user">
@@ -29,16 +27,16 @@
       </h1>
     </i>
     <fieldset class="info" style="text-align: center; border-radius: 5px">
-      <h1 style="font-family: monospace;">Oplysninger</h1>
+      <h1 style="font-family: initial;">Oplysninger</h1>
       <p>
         <br />
-        <label for="tel" id="label1" style="font-family: monospace;">Telefon</label>
-        <input type="tel" id="phone" placeholder="+45 52 60 10 56" autocomplete="on" style="width: 20%;
+        <label for="tel" id="label1" style="font-family: initial;">Telefon</label>
+        <input type="tel" id="phone" placeholder="+45 52 60 10 56" autocomplete="on" style="
         height: 35px;
         font-size: 10px;" />
       </p>
       <p id="phoneMessage"></p>
-      <button onclick="updatePhone()" style="width: 7%;
+      <button onclick="updatePhone()" style="
       background-color: midnightblue;
       color: white;
       height: 20px;
@@ -47,57 +45,65 @@
       border: 1px solid black;">Opdater Telefon</button>
       <div>
       <p> 
-        <label for="email" id="label3" style="font-family: monospace;">Email</label> 
-        <input type="email" placeholder="Dominicshundefrisor@gmail.com" id="email" autocomplete="on" style="width: 20%;
+        <label for="email" id="label3" style="font-family: initial;">Email</label> 
+        <input type="email" placeholder="Dominicshundefrisor@gmail.com" id="email" autocomplete="on" style="
         height: 35px;
         font-size: 10px;
         border: 1px solid white;
         " /> 
       </p>
       <p id="emailMessage"></p>
-      <button onclick="updateEmail()" style="width: 7%;
+      <button onclick="updateEmail()" style="
       background-color: midnightblue;
       color: white;
       height: 20px;
       cursor: pointer;
       font-size: x-small;
       border: 1px solid black;">Opdater Email</button>
+    </div>
       <p>
-        <label for="text" id="label2" style="font-family: monospace;">Adresse</label>
+        <label for="text" id="label2" style="font-family: initial;">Adresse</label>
         <input
           type="text"
           name="address"
           id="adresse"
-          autocomplete="street-address" style="width: 20%;
+          autocomplete="street-address" style="
           height: 35px;
           font-size: 10px;" placeholder="Jydeholmen 46, 2720 Vanløse"
-          onclick=""
         />
       </p>
       <p id="addressMessage"></p>
-      <button onclick="updateAddress()" style="width: 7%;
+      <button onclick="updateAddress()" style="
       background-color: midnightblue;
       color: white;
       height: 20px;
       cursor: pointer;
       font-size: x-small;
-      border: 1px solid black;">Opdater Adresse </button><br>
-
-      <div class="container">
-        <div class="row">
-        <div class="col-6">
-      <!--<div class="form-outline" class="news" >-->
-          <label style="font-family: monospace;" class="form-label" id="label4" for="header">Nyheder</label>
-          <input class="form-control" type="text" id="header" placeholder="Overskrift">
-          <textarea class="form-control" id="textArea" name="w3review" rows="4" cols="50" placeholder="Skriv nyheden her"></textarea>
-          <button onclick="postNews()" style="width: 7%;
-        background-color: midnightblue;
-        color: white;
-        font-size: x-small;
-        border: 1px solid black;">Publicér</button>
-      </div>
-      <div class ="col">
-        <button onclick="document.location='priser med input.html'" style="width: 7%;
+      border: 1px solid black; margin-bottom: 5px;">Opdater Adresse </button>
+      <br>
+      
+      <p id="nyhedsFelt" style="display: grid; justify-content: center;">
+      Nyhedsopdatering
+      <textarea name="" id="" cols="30" rows="10" placeholder="Skriv en nyhedsopdatering" style="-webkit-transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out;
+      outline: none;
+      padding: 3px 0px 3px 3px;
+      margin: 5px 1px 3px 0px;
+      border: 1px solid #DDDDDD;
+      width: 500px;
+      border-radius: 4px;
+      font-family: initial;"></textarea>
+      <button onclick="postNews()" style="
+      background-color: midnightblue;
+      cursor: pointer;
+      color: white;
+      height: 20px;
+      font-size: x-small;
+      border: 1px solid black;">Publicér</button>
+    </p>
+      <button onclick="document.location='priser med input.html'" style="
       background-color: midnightblue;
       color: white;
       height: 20px;
@@ -105,11 +111,6 @@
       cursor: pointer;
       border: 1px solid black;
       margin-top: 2%;">Ændre priser</button>
-      </div>
-    </div>
-    </div>
-<!---->
-
     </fieldset>
   </body>
   <script src="admin.js"></script>

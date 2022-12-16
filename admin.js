@@ -1,10 +1,3 @@
-const div = document.getElementById("admin");
-const text = "test";
-
-function updateInfo(phone){
-    console.log(phone.value);
-}
-
 function updatePhone(){
 let p = document.getElementById("phoneMessage");
     let phone = document.getElementById("phone").value;
@@ -16,7 +9,7 @@ function updateEmail(){
   let p = document.getElementById("emailMessage");
   let email = document.getElementById("email").value;
   let emails = JSON.stringify({email: email});
-  putPostOrPatchValue("http://localhost:8080/api/v1/contact/update-email", emails, 'PUT');
+  putPostOrPatchValue("https://hf-jpa.azurewebsites.net/api/v1/contact/update-email", emails, 'PUT');
   p.style.color = "green"
     p.innerHTML = "Email opdateret"
 }
@@ -38,7 +31,7 @@ function updateAddress(){
   let p = document.getElementById("addressMessage");
   let address = document.getElementById("adresse").value;
   let adresse = JSON.stringify({address: address});
-  putPostOrPatchValue("http://localhost:8080/api/v1/contact/update-address", adresse, 'PUT');
+  putPostOrPatchValue("https://hf-jpa.azurewebsites.net/api/v1/contact/update-address", adresse, 'PUT');
   p.style.color = "green"
     p.innerHTML = "Adresse opdateret"
 }
