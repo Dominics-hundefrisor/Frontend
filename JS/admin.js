@@ -55,5 +55,4 @@ const putPostOrPatchValue = async (url, data, method) => {
       console.log(error);
       return false;
     }
-    document.getElementById("login-heading").innerHTML = "Incorrect username or password"
 }
